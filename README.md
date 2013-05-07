@@ -10,19 +10,19 @@ It does this with a simple unrestricted license. So change the code, the name (p
 
 ### Set a cookie
 
-Cookie.set(name, value[, expires[, path]])
+Kaka.set(name, value[, expires[, path]])
 
 ### Get all cookies
 
-Cookie.get();
+Kaka.get();
 
 ### Get a specific cookie
 
-Cookie.get(name);
+Kaka.get(name);
 
 ### Remove a specific cookie
 
-Cookie.remove(name);
+Kaka.remove(name);
 
 ## License
   
