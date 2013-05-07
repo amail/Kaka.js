@@ -1,6 +1,6 @@
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
-Copyright (C) 2013 Robin Orheden <robin@comfirm.se>
+Copyright (C) 2013 Robin Orheden <orhedenr@gmail.com>
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
