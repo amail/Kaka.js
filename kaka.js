@@ -9,12 +9,13 @@ var Kaka = window.Kaka = {};
 
 Kaka.get = function(name){
 	var cookies = {};
+	var decodeComponent = decodeURIComponent;
 	var data = (document.cookie || "").split("; ");
 
 	for(var i=0;i<data.length;++i){
 		var segments = data[i].split("=", 2);
 		if(segments.length == 2){
-			cookies[segments[0]] = segments[1];
+			cookies[decodeComponent(segments[0])] = decodeComponent(segments[1]);
 		}
 	}
 
@@ -23,8 +24,9 @@ Kaka.get = function(name){
 
 Kaka.set = function(name, value, expires, path){
 	var variables = {};
+	var encodeComponent = encodeURIComponent;
 
-	variables[name] = value || '';
+	variables[name] = value == undefined || value == null ? '' : value;
 	variables['path'] = path || '/';
 
 	if(expires && expires.toGMTString){
@@ -34,7 +36,7 @@ Kaka.set = function(name, value, expires, path){
 	var cookie = "";
 
 	for(var key in variables){
-		cookie += (cookie != "" ? "; " : "") + key + "=" + variables[key];
+		cookie += (cookie != "" ? "; " : "") + encodeComponent(key) + "=" + encodeComponent[key];
 	}
 
 	document.cookie = cookie;
